@@ -26,7 +26,7 @@ public class Player {
 
     private List<Integer> savePlayerNumber(String numbers) {
         List<Integer> threeNumbers = new ArrayList<>();
-        numbers.chars().forEach(num -> threeNumbers.add(num-ZERO_CHAR));
+        numbers.chars().forEach(num -> threeNumbers.add(num - ZERO_CHAR));
         return threeNumbers;
     }
 
@@ -35,8 +35,9 @@ public class Player {
             throw new IllegalArgumentException(ErrorMessage.NOT_NUMBER_RANGE.getMessage());
         }
     }
+
     private boolean checkNumberRange(char number) {
-        if ((number-ZERO_CHAR)<NUMBER_RANGE_MIN || (number-ZERO_CHAR)>NUMBER_RANGE_MAX) {
+        if ((number - ZERO_CHAR) < NUMBER_RANGE_MIN || (number - ZERO_CHAR) > NUMBER_RANGE_MAX) {
             return false;
         }
         return true;
@@ -50,7 +51,7 @@ public class Player {
     }
 
     private void validIsThreeNumber(String numbers) {
-        if (numbers.length()!=THREE_NUMBER_LIMIT) {
+        if (numbers.length() != THREE_NUMBER_LIMIT) {
             throw new IllegalArgumentException(ErrorMessage.NOT_THREE_NUMBER_ERROR.getMessage());
         }
     }

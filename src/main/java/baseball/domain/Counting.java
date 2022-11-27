@@ -17,17 +17,17 @@ public class Counting {
     }
 
     public void saveResult(Result result) {
-        if (result==Result.STRIKE) {
+        if (result == Result.STRIKE) {
             strike++;
             return;
         }
-        if (result==Result.BALL) {
+        if (result == Result.BALL) {
             ball++;
         }
     }
 
     public boolean isFinish() {
-        if (strike==SUCCESS_COUNT) {
+        if (strike == SUCCESS_COUNT) {
             return true;
         }
         return false;
@@ -35,15 +35,15 @@ public class Counting {
 
     @Override
     public String toString() {
-        if (strike==0 && ball==0) {
+        if (strike == 0 && ball == 0) {
             return NOTHING_MESSAGE;
         }
         if (ball == 0) {
-            return strike+STRIKE_MESSAGE;
+            return strike + STRIKE_MESSAGE;
         }
-        if (strike==0) {
-            return ball+BALL_MESSAGE;
+        if (strike == 0) {
+            return ball + BALL_MESSAGE;
         }
-        return ball+BALL_MESSAGE + " " +strike+STRIKE_MESSAGE;
+        return ball + BALL_MESSAGE + " " + strike + STRIKE_MESSAGE;
     }
 }

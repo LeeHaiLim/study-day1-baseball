@@ -9,7 +9,7 @@ import java.util.List;
 
 class ComputerTest {
     private Computer computer;
-    
+
     @BeforeEach
     void init() {
         computer = Computer.saveComputerNumber(List.of(1, 2, 3));

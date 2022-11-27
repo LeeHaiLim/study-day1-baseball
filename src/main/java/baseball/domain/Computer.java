@@ -17,7 +17,7 @@ public class Computer {
 
     public Counting compareResult(List<Integer> playerNumbers) {
         Counting counting = new Counting();
-        for (int i=0; i<playerNumbers.size(); i++) {
+        for (int i = 0; i < playerNumbers.size(); i++) {
             Result result = Result.getResult(threeNumbers, playerNumbers.get(i), i);
             counting.saveResult(result);
         }
