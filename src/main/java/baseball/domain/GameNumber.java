@@ -16,15 +16,22 @@ public class GameNumber {
         return containNumber - strike;
     }
 
-    public int getStrikeNumbers() {
-        return 0;
+    public int getStrikeNumbers(UserNumber userNumber) {
+        int strike = 0;
+        List<Integer> userNumbers = userNumber.getUserNumbers();
+        for (int position = 0; position < userNumbers.size(); position++) {
+            if (isStrike(position, userNumbers.get(position))) {
+                strike++;
+            }
+        }
+        return strike;
     }
 
     private boolean isBall(int number) {
         return gameNumbers.contains(number);
     }
 
-    private boolean isStrike() {
-        return true;
+    private boolean isStrike(int position, int userNumber) {
+        return this.gameNumbers.get(position) == userNumber;
     }
 }

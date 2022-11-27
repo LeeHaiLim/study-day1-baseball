@@ -6,8 +6,8 @@
 ### 발급된 3개의 숫자를 저장하는 일급컬렉션 ClassName : GameNumber
 - [x] 볼의 개수를 반환하는 기능 - #getBallNumbers()
   - [x] 숫자가 포함되는지 판단하는 기능 - #isBall()
-- [ ] 스트라이크의 개수를 반환하는 기능 - #getStrikeNumbers()
-  - [ ] 포함되는 숫자가 자리수까지 일치하는지 판단하는 기능 - #isStrike()
+- [x] 스트라이크의 개수를 반환하는 기능 - #getStrikeNumbers()
+  - [x] 포함되는 숫자가 자리수까지 일치하는지 판단하는 기능 - #isStrike()
 ---
 ### 사용자의 입력을 담당하는 클래스 ClassName : InputView
 - [ ] 사용자의 숫자를 문자열로 입력받아 List 로 변환하는 기능 - #readUserNumber()
