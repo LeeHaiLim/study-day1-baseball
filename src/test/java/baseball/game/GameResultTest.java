@@ -17,7 +17,7 @@ public class GameResultTest {
         gameResult.plusScore(Result.BALL);
         gameResult.plusScore(Result.BALL);
 
-        int ballSize = gameResult.getBallSize();
+        int ballSize = gameResult.getBallCount();
         assertThat(ballSize).isEqualTo(3);
     }
 }

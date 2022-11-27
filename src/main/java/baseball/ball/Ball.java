@@ -18,12 +18,22 @@ public class Ball {
     }
 
     public Result compareWithOtherBall(Ball otherBall) {
-        if (number.isSameWithOtherNumber(otherBall.getNumber()) && index.isSameWithOtherIndex(otherBall.getIndex())) {
+        if (isSameNumberAndIndex(otherBall)) {
             return Result.STRIKE;
         }
-        if (number.isSameWithOtherNumber(otherBall.getNumber())) {
+
+        if (isSameNumber(otherBall)) {
             return Result.BALL;
         }
+
         return Result.NOTHING;
+    }
+
+    private boolean isSameNumberAndIndex(Ball otherBall) {
+        return number.isEqualTo(otherBall.getNumber()) && index.isEqualTo(otherBall.getIndex());
+    }
+
+    private boolean isSameNumber(Ball otherBall) {
+        return number.isEqualTo(otherBall.getNumber());
     }
 }

@@ -14,7 +14,7 @@ public class Index {
         return index;
     }
 
-    public boolean isSameWithOtherIndex(Index otherIndex) {
+    public boolean isEqualTo(Index otherIndex) {
         return index == otherIndex.getIndex();
     }
 

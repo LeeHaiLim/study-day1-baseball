@@ -17,12 +17,12 @@ public class Output {
             System.out.println("낫싱");
         }
 
-        if(gameResult.getBallSize() > 0) {
-            System.out.print(gameResult.getBallSize() + "볼 ");
+        if(gameResult.getBallCount() > 0) {
+            System.out.print(gameResult.getBallCount() + "볼 ");
         }
 
-        if(gameResult.getStrikeSize() > 0) {
-            System.out.print(gameResult.getStrikeSize() + "스트라이크");
+        if(gameResult.getStrikeCount() > 0) {
+            System.out.println(gameResult.getStrikeCount() + "스트라이크");
         }
     }
 

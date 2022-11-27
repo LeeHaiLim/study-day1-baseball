@@ -7,33 +7,34 @@ import baseball.ball.Result;
 
 public class GameResult {
     public static final int NO_SCORE = 0;
-    private int ballSize;
-    private int strikeSize;
+    private int ballCount;
+    private int strikeCount;
 
     public GameResult() {
-        this.ballSize = 0;
-        this.strikeSize = 0;
+        this.ballCount = NO_SCORE;
+        this.strikeCount = NO_SCORE;
     }
 
-    public int getBallSize() {
-        return ballSize;
+    public int getBallCount() {
+        return ballCount;
     }
 
-    public int getStrikeSize() {
-        return strikeSize;
+    public int getStrikeCount() {
+        return strikeCount;
     }
 
     public void plusScore(Result result) {
         if (result.isBall()) {
-            ballSize++;
+            ballCount++;
         }
+
         if (result.isStrike()) {
-            strikeSize++;
+            strikeCount++;
         }
     }
 
     public boolean isNothing() {
-        return ballSize == NO_SCORE && strikeSize == NO_SCORE;
+        return ballCount == NO_SCORE && strikeCount == NO_SCORE;
     }
 
     public BaseBallStatus isWinCondition() {
@@ -44,6 +45,6 @@ public class GameResult {
     }
 
     public boolean isGameWin() {
-        return strikeSize == Balls.BALLS_SIZE;
+        return strikeCount == Balls.BALLS_SIZE;
     }
 }

@@ -15,23 +15,31 @@ public class Input {
 
     public List<Integer> getUserNumbers() {
         String readLine = Console.readLine();
-
         inputValidator.validateDigits(readLine);
 
+        List<Integer> numbers = splitFromString(readLine);
+        validateNumbers(numbers);
+
+        return numbers;
+    }
+
+    private static List<Integer> splitFromString(String readLine) {
         List<Integer> numbers = Arrays.stream(readLine.split(""))
                 .map(Integer::parseInt)
                 .collect(Collectors.toList());
+        return numbers;
+    }
 
+    private void validateNumbers(List<Integer> numbers) {
         inputValidator.validateInputSize(numbers);
         inputValidator.validateDuplicate(numbers);
         inputValidator.validateNumberRange(numbers);
-        return numbers;
     }
 
     public String getCommandAfterGameWin() {
         String readCommand = Console.readLine();
-        inputValidator.validateDigits(readCommand);
         inputValidator.validateCommandAfterGame(readCommand);
+        inputValidator.validateDigits(readCommand);
         return readCommand;
     }
 }

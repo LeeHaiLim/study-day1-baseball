@@ -14,7 +14,7 @@ public class Number {
         return number;
     }
 
-    public boolean isSameWithOtherNumber(Number otherNumber) {
+    public boolean isEqualTo(Number otherNumber) {
         return number == otherNumber.getNumber();
     }
 

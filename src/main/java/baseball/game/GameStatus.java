@@ -4,7 +4,7 @@ public enum GameStatus {
     PLAYING(1),
     EXIT(2);
 
-    private int num;
+    private final int num;
 
     GameStatus(int num) {
         this.num = num;

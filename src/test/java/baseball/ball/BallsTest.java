@@ -19,10 +19,10 @@ public class BallsTest {
         List<Integer> otherNumbers = List.of(1, 6, 9);
         Balls otherBalls = new Balls(otherNumbers);
 
-        GameResult gameResult = balls.compareAllBalls(otherBalls);
+        GameResult gameResult = balls.compareWithBalls(otherBalls);
 
-        int ballSize = gameResult.getBallSize();
-        int strikeSize = gameResult.getStrikeSize();
+        int ballSize = gameResult.getBallCount();
+        int strikeSize = gameResult.getStrikeCount();
 
         assertThat(strikeSize).isEqualTo(1);
         assertThat(ballSize).isEqualTo(1);
