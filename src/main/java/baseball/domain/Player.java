@@ -2,6 +2,8 @@ package baseball.domain;
 
 import baseball.constant.ErrorMessage;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import static baseball.constant.Constant.*;
@@ -9,8 +11,17 @@ import static baseball.constant.Constant.*;
 public class Player {
     private final List<Integer> numbers;
 
-    public Player(List<Integer> numbers) {
-        this.numbers = numbers;
+    public Player(String numbers) {
+        validNumberRange(numbers);
+        validDuplicateNumber(numbers);
+        validIsThreeNumber(numbers);
+        this.numbers = savePlayerNumber(numbers);
+    }
+
+    private List<Integer> savePlayerNumber(String numbers) {
+        List<Integer> threeNumbers = new ArrayList<>();
+        numbers.chars().forEach(num -> threeNumbers.add(num-ZERO_CHAR));
+        return threeNumbers;
     }
 
     private void validNumberRange(String numbers) {
