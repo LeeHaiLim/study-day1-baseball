@@ -32,4 +32,18 @@ public class Counting {
         }
         return false;
     }
+
+    @Override
+    public String toString() {
+        if (strike==0 && ball==0) {
+            return NOTHING_MESSAGE;
+        }
+        if (ball == 0) {
+            return strike+STRIKE_MESSAGE;
+        }
+        if (strike==0) {
+            return ball+BALL_MESSAGE;
+        }
+        return ball+BALL_MESSAGE + " " +strike+STRIKE_MESSAGE;
+    }
 }
