@@ -25,4 +25,11 @@ public class Counting {
             ball++;
         }
     }
+
+    public boolean isFinish() {
+        if (strike==SUCCESS_COUNT) {
+            return true;
+        }
+        return false;
+    }
 }
