@@ -24,4 +24,11 @@ public class Player {
         }
         return true;
     }
+
+    private void validDuplicateNumber(String numbers) {
+        if (numbers.chars().distinct().count() != numbers.length()) {
+            throw new IllegalArgumentException(ErrorMessage.DUPLICATE_NUMBER_ERROR.getMessage());
+
+        }
+    }
 }
