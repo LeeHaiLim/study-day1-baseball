@@ -20,7 +20,7 @@
 - [x] 사용자에게 3자리 숫자를 입력받는다 `InputView - readNumbers()` 
   - [x] 숫자가 아닐 경우 예외가 발생한다. `InputView - validIsDigit()`
   - [ ] 중복된 숫자가 있다면 예외가 발생한다. `Player - validDuplicateNumber()`
-  - [ ] 1~9사이의 숫자가 아닐 경우 예외가 발생한다. `Player - validNumberRange()`
+  - [x] 1~9사이의 숫자가 아닐 경우 예외가 발생한다. `Player - validNumberRange()`
 
 - [ ] 컴퓨터는 1~9사이의 중복되지 않은 랜덤 수 3자리를 생성한다. `GameController - generageThreeNumber()`
 - [ ] 컴퓨터가 생성한 숫자와 사용자가 입력한 숫자를 비교하여 저장한다. `GameController - saveResult()`
