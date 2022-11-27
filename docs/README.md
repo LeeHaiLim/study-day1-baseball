@@ -17,18 +17,18 @@
 
 
 ### 구현할 기능 목록
-- [ ] 사용자에게 3자리 숫자를 입력받는다 `readNumbers()`
-  - [ ] 중복된 숫자가 있다면 예외가 발생한다. `validDuplicateNumber()`
-  - [ ] 숫자가 아닐 경우 예외가 발생한다. `validIsDigit()`
-  - [ ] 1~9사이의 숫자가 아닐 경우 예외가 발생한다. `validNumberRange()`
+- [ ] 사용자에게 3자리 숫자를 입력받는다 `InputView - readNumbers()` 
+  - [ ] 숫자가 아닐 경우 예외가 발생한다. `InputView - validIsDigit()`
+  - [ ] 중복된 숫자가 있다면 예외가 발생한다. `Player - validDuplicateNumber()`
+  - [ ] 1~9사이의 숫자가 아닐 경우 예외가 발생한다. `Player - validNumberRange()`
 
-- [ ] 컴퓨터는 1~9사이의 중복되지 않은 랜덤 수 3자리를 생성한다. `generageThreeNumber()`
-- [ ] 컴퓨터가 생성한 숫자와 사용자가 입력한 숫자를 비교하여 저장한다. `saveResult()`
-- [ ] 결과를 출력한다. `printResult()`
+- [ ] 컴퓨터는 1~9사이의 중복되지 않은 랜덤 수 3자리를 생성한다. `GameController - generageThreeNumber()`
+- [ ] 컴퓨터가 생성한 숫자와 사용자가 입력한 숫자를 비교하여 저장한다. `GameController - saveResult()`
+- [ ] 결과를 출력한다. `OutputView - printResult()`
   - [ ] 입력한 수에 대한 결과를 볼, 스트라이크 개수로 표시한다. 
   - [ ] 하나도 없는 경우는 `낫싱`으로 표시한다.
   - [ ] 3개의 숫자를 모두 맞힐 경우 `3스트라이크`로 표시한다. 
-- [ ] 3개의 숫자를 모두 맞히면 게임은 종료된다. `isFinish()`
+- [ ] 3개의 숫자를 모두 맞히면 게임은 종료된다. `Result - isFinish()`
 
-- [ ] 재시작/종료를 구분하는 1과 2를 입력받는다. `readGameCommand()`
-- [ ] 1과 2가 아닐 경우 예외가 발생한다. `validCommandNumber()`
+- [ ] 재시작/종료를 구분하는 1과 2를 입력받는다. `InputView - readGameCommand()`
+- [ ] 1과 2가 아닐 경우 예외가 발생한다. `Command - validCommandNumber()`
