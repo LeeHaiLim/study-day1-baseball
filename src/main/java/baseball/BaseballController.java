@@ -12,11 +12,12 @@ public class BaseballController {
     OutputView outputView = new OutputView();
 
     public void run() {
+        outputView.printGameStart();
         do {
             Answer answer = Answer.generateAnswer();
             playGame(answer);
+            outputView.printGameEnd();
         } while (new GameCommand(inputView.readInputGameCommand()).isRestart());
-
     }
 
     public void playGame(Answer answer) {
