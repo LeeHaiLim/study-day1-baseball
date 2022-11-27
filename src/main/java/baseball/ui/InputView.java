@@ -10,12 +10,13 @@ import java.util.stream.Collectors;
 public class InputView {
 
     private static final int VALID_SIZE = 3;
+    private static final String SEPARATOR = "";
 
     public static List<Integer> readUserNumber() {
         String userNumberInput = Console.readLine();
         isValidLength(userNumberInput);
         isNumeral(userNumberInput);
-        return Arrays.stream(userNumberInput.split(""))
+        return Arrays.stream(userNumberInput.split(SEPARATOR))
                 .map(Integer::parseInt)
                 .collect(Collectors.toList());
     }
