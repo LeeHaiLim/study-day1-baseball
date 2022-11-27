@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public enum GameCommand {
     RETRY(1),
-    QUIT(0);
+    QUIT(2);
 
     private final int reGameInput;
 
