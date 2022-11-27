@@ -31,4 +31,10 @@ public class Player {
 
         }
     }
+
+    private void validIsThreeNumber(String numbers) {
+        if (numbers.length()!=THREE_NUMBER_LIMIT) {
+            throw new IllegalArgumentException(ErrorMessage.NOT_THREE_NUMBER_ERROR.getMessage());
+        }
+    }
 }
