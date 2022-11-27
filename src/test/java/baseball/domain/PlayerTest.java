@@ -18,6 +18,14 @@ class PlayerTest {
     @DisplayName("3자리의 숫자를 입력해야 한다.")
     @ParameterizedTest
     @ValueSource(strings = {"12", "1", ""})
+    void playerNumberRadixTest(String input) {
+        Assertions.assertThatThrownBy(() -> new Player(input))
+                .isInstanceOf(IllegalArgumentException.class);
+    }
+
+    @DisplayName("숫자를 입력해야 한다.")
+    @ParameterizedTest
+    @ValueSource(strings = {"%$@", "-()", "12*"})
     void playerNumberDigitTest(String input) {
         Assertions.assertThatThrownBy(() -> new Player(input))
                 .isInstanceOf(IllegalArgumentException.class);
