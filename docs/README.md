@@ -45,4 +45,5 @@
 ---
 ### 숫자 야구 게임 컨트롤러 ClassName : BaseballGameController
 - [ ] 숫자 야구 게임을 실행 - #run()
-
+  - [ ] 숫자를 맞출 때 까지 (strike 가 3이 될 때 까지) 게임을 진행 - #doBaseBallGame()
+  - [ ] 게임 종료 후 재시작 관련 입력 요청 및 입력값 반환기능 - #getGameCommand()
