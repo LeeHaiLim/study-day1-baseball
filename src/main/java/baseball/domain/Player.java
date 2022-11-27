@@ -18,6 +18,10 @@ public class Player {
         this.numbers = savePlayerNumber(numbers);
     }
 
+    public List<Integer> getNumbers() {
+        return Collections.unmodifiableList(numbers);
+    }
+
     private List<Integer> savePlayerNumber(String numbers) {
         List<Integer> threeNumbers = new ArrayList<>();
         numbers.chars().forEach(num -> threeNumbers.add(num-ZERO_CHAR));
