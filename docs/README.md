@@ -31,13 +31,13 @@
 - [x] 사용자의 숫자를 반환하는 기능 - #getUserNumbers()
 ---
 ### 출력을 담당하는 클래스 ClassName : OutputView
-- [ ] 게임을 시작하는 문구 출력 - #printGameStartMessage()
-- [ ] 숫자 입력 요청 문구 철력 - #askNumber()
-- [ ] 낫싱을 출력하는 기능 - #printNothing()
+- [x] 게임을 시작하는 문구 출력 - #printGameStartMessage()
+- [x] 숫자 입력 요청 문구 철력 - #askNumber()
+- [x] 낫싱을 출력하는 기능 - #printNothing()
 - [ ] 게임의 결과를 출력하는 기능 - #printResult()
   - [ ] 스트라이크 개수에 따른 결과를 출력하는 기능 - #saveStrikeResult
   - [ ] 볼의 개수에 따른 결과를 출력하는 기능 - #saveBallResult
-- [ ] 게임 종료 시 출력 - #printWinningMessage()
+- [x] 게임 종료 시 출력 - #printWinningMessage()
 ---
 ### 게임 진행을 담당하는 클래스 ClassName : BaseballGame
 - [ ] 숫자를 1번 발급받아 게임을 진행하는 기능 - #doBaseballGame()
