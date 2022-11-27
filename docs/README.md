@@ -34,9 +34,9 @@
 - [x] 게임을 시작하는 문구 출력 - #printGameStartMessage()
 - [x] 숫자 입력 요청 문구 철력 - #askNumber()
 - [x] 낫싱을 출력하는 기능 - #printNothing()
-- [ ] 게임의 결과를 출력하는 기능 - #printResult()
-  - [ ] 스트라이크 개수에 따른 결과를 출력하는 기능 - #saveStrikeResult
-  - [ ] 볼의 개수에 따른 결과를 출력하는 기능 - #saveBallResult
+- [x] 게임의 결과를 출력하는 기능 - #printResult()
+  - [x] 스트라이크 개수에 따른 결과를 출력하는 기능 - #saveStrikeResult
+  - [x] 볼의 개수에 따른 결과를 출력하는 기능 - #saveBallResult
 - [x] 게임 종료 시 출력 - #printWinningMessage()
 ---
 ### 게임 진행을 담당하는 클래스 ClassName : BaseballGame

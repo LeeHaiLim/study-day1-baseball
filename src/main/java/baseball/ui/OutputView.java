@@ -14,8 +14,11 @@ public class OutputView {
         System.out.println("낫싱");
     }
 
-    public static void printResult() {
-
+    public static void printResult(int strikes, int balls) {
+        StringBuilder result = new StringBuilder();
+        saveBallResult(result,balls);
+        saveStrikeResult(result, strikes);
+        System.out.println(result);
     }
 
     public static void printWinningMessage() {
@@ -23,11 +26,15 @@ public class OutputView {
         System.out.println("게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요.");
     }
 
-    private static void saveStrikeResult() {
-
+    private static void saveStrikeResult(StringBuilder result, int strikes) {
+        if (strikes != 0) {
+            result.append(strikes + "스트라이크");
+        }
     }
 
-    private static void saveBallResult() {
-
+    private static void saveBallResult(StringBuilder result, int balls) {
+        if (balls != 0) {
+            result.append(balls + "볼 ");
+        }
     }
 }
