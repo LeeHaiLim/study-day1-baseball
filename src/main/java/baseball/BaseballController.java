@@ -8,8 +8,8 @@ import baseball.view.InputView;
 import baseball.view.OutputView;
 
 public class BaseballController {
-    InputView inputView = new InputView();
-    OutputView outputView = new OutputView();
+    InputView inputView = InputView.getInstance();
+    OutputView outputView = OutputView.getInstance();
 
     public void run() {
         outputView.printGameStart();

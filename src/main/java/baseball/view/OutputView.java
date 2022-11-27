@@ -7,6 +7,11 @@ import static baseball.view.OutputMessage.STRIKE;
 import static baseball.view.OutputMessage.NOTHING;
 
 public class OutputView {
+    private static final OutputView INSTANCE = new OutputView();
+
+    private OutputView() {
+    }
+
     public void printGameStart() {
         System.out.println(GAME_START.message());
     }
@@ -26,5 +31,9 @@ public class OutputView {
 
     public void printGameEnd() {
         System.out.println(GAME_END.message());
+    }
+
+    public static OutputView getInstance() {
+        return INSTANCE;
     }
 }
