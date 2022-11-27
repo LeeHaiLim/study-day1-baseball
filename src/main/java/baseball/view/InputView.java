@@ -4,11 +4,9 @@ import static camp.nextstep.edu.missionutils.Console.readLine;
 import static baseball.view.InputMessage.NUMBER;
 import static baseball.view.InputMessage.GAME_COMMAND;
 
-import baseball.domain.GameCommand;
-
 public class InputView {
     public String readInputNumber() {
-        System.out.print(InputMessage.NUMBER.message());
+        System.out.print(NUMBER.message());
         return readLine().trim();
     }
 
