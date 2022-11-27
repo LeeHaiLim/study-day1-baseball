@@ -1,5 +1,6 @@
 package baseball.ui;
 
+import baseball.domain.GameCommand;
 import camp.nextstep.edu.missionutils.Console;
 
 import java.util.Arrays;
@@ -19,14 +20,16 @@ public class InputView {
                 .collect(Collectors.toList());
     }
 
-    public static int readReGameInput() {
-        return 0;
+    public static GameCommand readReGameInput() throws IllegalArgumentException {
+        String reGameInput = Console.readLine();
+        isNumeral(reGameInput);
+        return GameCommand.getGameCommand(Integer.parseInt(reGameInput));
     }
 
     private static void isValidLength(String userNumberInput) {
         if (userNumberInput.length() != VALID_SIZE) {
             throw new IllegalArgumentException("입력 시 숫자 3개를 입력해야 합니다.");
-       }
+        }
     }
 
     private static void isNumeral(String numberInput) {

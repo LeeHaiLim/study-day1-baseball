@@ -14,8 +14,8 @@
   - 예외처리
     - [x] 입력받은 문자열의 길이가 3이 아닌 경우 예외처리 - #isValidLength()
     - [x] 입력 받은 문자열이 숫자로 변환이 가능하지 않으면 예외처리 - #isNumeral()
-- [ ] 재게임 관련 입력을 받아 숫자로 변환하는 기능 - #readReGameInput()
-  - [ ] 입력 받은 문자열이 숫자로 변환이 가능하지 않으면 예외처리 - #isNumeral()
+- [x] 재게임 관련 입력을 받아 변환 후 반환 기능 - #readReGameInput()
+  - [x] 입력 받은 문자열이 숫자로 변환이 가능하지 않으면 예외처리 - #isNumeral()
 ---
 ### 재게임 관련 열거형 클래스 ClassName: GameCommand
 - 멤버 : RETRY , QUIT
