@@ -7,8 +7,7 @@ public enum OutputMessage {
     GAME_END(String.format("%d개의 숫자를 모두 맞히셨습니다! 게임 종료", BASEBALL_NUMBER_SIZE)),
     BALL("%d볼 "),
     STRIKE("%d스트라이크"),
-    NOTHING("낫싱")
-    ;
+    NOTHING("낫싱");
 
     private final String message;
 
