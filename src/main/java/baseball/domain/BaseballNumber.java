@@ -4,6 +4,8 @@ import static baseball.util.Constants.BASEBALL_NUMBER_RANGE_START;
 import static baseball.util.Constants.BASEBALL_NUMBER_RANGE_END;
 import static baseball.util.ErrorMessage.NUMBER_RANGE;
 
+import java.util.Objects;
+
 public final class BaseballNumber {
     private final int number;
 
@@ -29,5 +31,10 @@ public final class BaseballNumber {
         }
         BaseballNumber that = (BaseballNumber) o;
         return number == that.number;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(number);
     }
 }
