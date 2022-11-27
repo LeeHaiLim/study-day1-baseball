@@ -6,9 +6,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import static baseball.constant.Constant.*;
-
 public class Player {
+    public static final int NUMBER_RANGE_MIN = 1;
+    public static final int NUMBER_RANGE_MAX = 9;
+    public static final int THREE_NUMBER_LIMIT = 3;
+    public static final char ZERO_CHAR = '0';
     private final List<Integer> numbers;
 
     public Player(String numbers) {
