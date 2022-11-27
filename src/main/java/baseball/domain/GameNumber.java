@@ -9,10 +9,11 @@ public class GameNumber {
         this.gameNumbers = gameNumbers;
     }
 
-    public int getBallNumbers(UserNumber userNumber) {
-        return (int) userNumber.getUserNumbers().stream()
+    public int getBallNumbers(UserNumber userNumber, int strike) {
+        int containNumber = (int) userNumber.getUserNumbers().stream()
                 .filter(this::isBall)
                 .count();
+        return containNumber - strike;
     }
 
     public int getStrikeNumbers() {
