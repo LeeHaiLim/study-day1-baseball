@@ -6,6 +6,7 @@ import static baseball.util.Constants.BASEBALL_NUMBER_SIZE;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Answer {
     private final List<BaseballNumber> numbers;
@@ -41,5 +42,21 @@ public class Answer {
             }
         }
         return new Answer(computer.stream().map(BaseballNumber::new).collect(Collectors.toList()));
+    }
+
+    public BaseballNumber get(int index) {
+        return numbers.get(index);
+    }
+
+    public int indexOf(BaseballNumber number) {
+        return numbers.indexOf(number);
+    }
+
+    public boolean contains(BaseballNumber number) {
+        return numbers.contains(number);
+    }
+
+    public Stream<BaseballNumber> stream() {
+        return numbers.stream();
     }
 }
