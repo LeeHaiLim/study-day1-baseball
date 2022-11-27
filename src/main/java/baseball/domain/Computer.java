@@ -1,5 +1,7 @@
 package baseball.domain;
 
+import baseball.constant.Result;
+
 import java.util.List;
 
 public class Computer {
@@ -11,5 +13,14 @@ public class Computer {
 
     public static Computer saveComputerNumber(List<Integer> threeNumbers) {
         return new Computer(threeNumbers);
+    }
+
+    private Counting compereResult(List<Integer> playerNumbers) {
+        Counting counting = new Counting();
+        for (int i=0; i<playerNumbers.size(); i++) {
+            Result result = Result.getResult(threeNumbers, playerNumbers.get(i), i);
+            counting.saveResult(result);
+        }
+        return counting;
     }
 }
