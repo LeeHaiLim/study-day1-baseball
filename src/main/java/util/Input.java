@@ -23,6 +23,7 @@ public class Input {
                 .collect(Collectors.toList());
 
         inputValidator.validateInputSize(numbers);
+        inputValidator.validateDuplicate(numbers);
         inputValidator.validateNumberRange(numbers);
         return numbers;
     }

@@ -3,6 +3,7 @@ package util;
 import baseball.ball.Balls;
 import baseball.ball.Number;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -14,6 +15,14 @@ public class InputValidator {
 
         if (!isNumber) {
             throw new IllegalArgumentException("[ERROR] 숫자만 입력해야 합니다.");
+        }
+    }
+
+    public void validateDuplicate(List<Integer> numbers) {
+        Set<Integer> set = new HashSet<>(numbers);
+
+        if(set.size() != numbers.size()) {
+            throw new IllegalArgumentException("[ERROR] 중복이 존재합니다.");
         }
     }
 
