@@ -25,7 +25,7 @@ public class Player {
     }
 
     private void validNumberRange(String numbers) {
-        if (numbers.chars().noneMatch(num -> checkNumberRange((char) num))) {
+        if (!numbers.chars().allMatch(num -> checkNumberRange((char) num))) {
             throw new IllegalArgumentException(ErrorMessage.NOT_NUMBER_RANGE.getMessage());
         }
     }
