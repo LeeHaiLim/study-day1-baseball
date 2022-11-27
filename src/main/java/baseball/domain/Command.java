@@ -12,6 +12,13 @@ public class Command {
         this.command = Integer.parseInt(command);
     }
 
+    public boolean isRestart() {
+        if (command == RESTART) {
+            return true;
+        }
+        return false;
+    }
+
     private void validCommand(String command) {
         if (Integer.parseInt(command) != 1 && Integer.parseInt(command) != 2) {
             throw new IllegalArgumentException(ErrorMessage.NOT_NUMBER_COMMAND.getMessage());
