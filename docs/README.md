@@ -4,8 +4,8 @@
 - [x] 범위 내의 중복되지 않는 랜덤 숫자 3개를 반환하는 기능 - #getGameNumbers()
 ---
 ### 발급된 3개의 숫자를 저장하는 일급컬렉션 ClassName : GameNumber
-- [ ] 볼의 개수를 반환하는 기능 - #getBallNumbers()
-  - [ ] 숫자가 포함되는지 판단하는 기능 - #isBall()
+- [x] 볼의 개수를 반환하는 기능 - #getBallNumbers()
+  - [x] 숫자가 포함되는지 판단하는 기능 - #isBall()
 - [ ] 스트라이크의 개수를 반환하는 기능 - #getStrikeNumbers()
   - [ ] 포함되는 숫자가 자리수까지 일치하는지 판단하는 기능 - #isStrike()
 ---
