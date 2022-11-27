@@ -40,7 +40,8 @@
 - [x] 게임 종료 시 출력 - #printWinningMessage()
 ---
 ### 게임 진행을 담당하는 클래스 ClassName : BaseballGame
-- [ ] 숫자를 1번 발급받아 게임을 진행하는 기능 - #doBaseballGame()
+- [x] 숫자를 입력하여 1회 게임을 진행하는 기능 - #doBaseballGame()
+  - [x] 입력된 숫자에 따라 결과를 출력하는 기능 - #printResult()
 ---
 ### 숫자 야구 게임 컨트롤러 ClassName : BaseballGameController
 - [ ] 숫자 야구 게임을 실행 - #run()
