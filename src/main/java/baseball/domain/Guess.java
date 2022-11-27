@@ -1,5 +1,7 @@
 package baseball.domain;
 
+import static baseball.util.ErrorMessage.NUMBER_NOT_NUMBER;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -16,7 +18,7 @@ public class Guess extends Answer {
                     .map(BaseballNumber::new)
                     .collect(Collectors.toList());
         } catch (NumberFormatException e) {
-            throw new IllegalArgumentException("");
+            throw new IllegalArgumentException(NUMBER_NOT_NUMBER.message());
         }
     }
 }

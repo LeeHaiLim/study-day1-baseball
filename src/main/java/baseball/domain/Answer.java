@@ -2,6 +2,8 @@ package baseball.domain;
 
 import static baseball.util.BaseballNumberGenerator.generateRandomNumber;
 import static baseball.util.Constants.BASEBALL_NUMBER_SIZE;
+import static baseball.util.ErrorMessage.NUMBER_SIZE;
+import static baseball.util.ErrorMessage.NUMBER_DISTINCT;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,15 +23,16 @@ public class Answer {
         isDistinct(numbers);
     }
 
-    private void isDistinct(List<BaseballNumber> numbers) {
-        if (numbers.stream().distinct().count() != numbers.size()) {
-            throw new IllegalArgumentException("");
+    private void isValidSize(List<BaseballNumber> numbers) {
+        if (numbers.size() != BASEBALL_NUMBER_SIZE) {
+            throw new IllegalArgumentException(
+                    String.format(NUMBER_SIZE.message(), BASEBALL_NUMBER_SIZE));
         }
     }
 
-    private void isValidSize(List<BaseballNumber> numbers) {
-        if (numbers.size() != BASEBALL_NUMBER_SIZE) {
-            throw new IllegalArgumentException("");
+    private void isDistinct(List<BaseballNumber> numbers) {
+        if (numbers.stream().distinct().count() != numbers.size()) {
+            throw new IllegalArgumentException(NUMBER_DISTINCT.message());
         }
     }
 
