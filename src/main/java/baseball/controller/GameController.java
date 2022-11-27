@@ -1,5 +1,6 @@
 package baseball.controller;
 
+import baseball.constant.Constant;
 import baseball.domain.Command;
 import baseball.domain.Computer;
 import baseball.domain.Counting;
@@ -38,8 +39,8 @@ public class GameController {
 
     public List<Integer> generateThreeNumber() {
         List<Integer> computerNumbers = new ArrayList<>();
-        while (computerNumbers.size() < 3) {
-            int randomNumber = Randoms.pickNumberInRange(1, 9);
+        while (computerNumbers.size() < Constant.THREE_NUMBER_LIMIT) {
+            int randomNumber = Randoms.pickNumberInRange(Constant.NUMBER_RANGE_MIN, Constant.NUMBER_RANGE_MAX);
             if (!computerNumbers.contains(randomNumber)) {
                 computerNumbers.add(randomNumber);
             }

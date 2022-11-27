@@ -1,5 +1,6 @@
 package baseball.domain;
 
+import baseball.constant.Constant;
 import baseball.constant.ErrorMessage;
 
 import java.util.ArrayList;
@@ -7,9 +8,6 @@ import java.util.Collections;
 import java.util.List;
 
 public class Player {
-    public static final int NUMBER_RANGE_MIN = 1;
-    public static final int NUMBER_RANGE_MAX = 9;
-    public static final int THREE_NUMBER_LIMIT = 3;
     public static final char ZERO_CHAR = '0';
     private final List<Integer> numbers;
 
@@ -37,7 +35,7 @@ public class Player {
     }
 
     private boolean checkNumberRange(char number) {
-        if ((number - ZERO_CHAR) < NUMBER_RANGE_MIN || (number - ZERO_CHAR) > NUMBER_RANGE_MAX) {
+        if ((number - ZERO_CHAR) < Constant.NUMBER_RANGE_MIN || (number - ZERO_CHAR) > Constant.NUMBER_RANGE_MAX) {
             return false;
         }
         return true;
@@ -51,7 +49,7 @@ public class Player {
     }
 
     private void validIsThreeNumber(String numbers) {
-        if (numbers.length() != THREE_NUMBER_LIMIT) {
+        if (numbers.length() != Constant.THREE_NUMBER_LIMIT) {
             throw new IllegalArgumentException(ErrorMessage.NOT_THREE_NUMBER_ERROR.getMessage());
         }
     }
