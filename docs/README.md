@@ -27,11 +27,12 @@
 - [x] 컴퓨터가 생성한 숫자와 사용자가 입력한 숫자를 비교한다. `Computer-compareResult()`
   - [x] 비교 결과를 생성한다. `Result - getResult()`
   - [x] 비교 결과를 저장한다. `Counting - saveResult()`
-- [ ] 결과를 출력한다. `OutputView - printResult()`
+- [x] 결과를 출력한다. `OutputView - printResult()`
   - [x] 입력한 수에 대한 결과를 볼, 스트라이크 개수로 표시한다. 
   - [x] 하나도 없는 경우는 `낫싱`으로 표시한다.
   - [x] 3개의 숫자를 모두 맞힐 경우 `3스트라이크`로 표시한다. 
 - [x] 3개의 숫자를 모두 맞히면 게임은 종료된다. `Counting - isFinish()`
+- [x] 게임 종료 문구를 출력한다. `OutputView - printFinishMessage()`
 
 - [x] 재시작/종료를 구분하는 1과 2를 입력받는다. `InputView - readGameCommand()`
 - [x] 1과 2가 아닐 경우 예외가 발생한다. `Command - validCommand()`
