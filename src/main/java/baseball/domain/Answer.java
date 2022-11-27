@@ -16,7 +16,20 @@ public class Answer {
     }
 
     private void validate(List<BaseballNumber> numbers) {
-        //todo: validation logic
+        isValidSize(numbers);
+        isDistinct(numbers);
+    }
+
+    private void isDistinct(List<BaseballNumber> numbers) {
+        if (numbers.stream().distinct().count() != numbers.size()) {
+            throw new IllegalArgumentException("");
+        }
+    }
+
+    private void isValidSize(List<BaseballNumber> numbers) {
+        if (numbers.size() != BASEBALL_NUMBER_SIZE) {
+            throw new IllegalArgumentException("");
+        }
     }
 
     public static Answer generateAnswer() {
