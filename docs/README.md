@@ -1,7 +1,7 @@
 ## 기능 목록
 
 ### 중복되지 않는 랜덤 숫자 3개를 발급해주는 클래스 ClassName : NumberGenerator
-- [ ] 범위 내의 중복되지 않는 랜덤 숫자 3개를 반환하는 기능 - #getGameNumbers()
+- [x] 범위 내의 중복되지 않는 랜덤 숫자 3개를 반환하는 기능 - #getGameNumbers()
 ---
 ### 발급된 3개의 숫자를 저장하는 일급컬렉션 ClassName : GameNumber
 - [ ] 볼의 개수를 반환하는 기능 - #getBallNumbers()
