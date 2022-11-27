@@ -14,20 +14,19 @@ import java.util.List;
 public class GameController {
     private final InputView inputView = new InputView();
     private final OutputView outputView = new OutputView();
-    private Computer computer;
 
     public void startGame() {
         boolean isContinue;
         do {
-            computer = Computer.saveComputerNumber(generateThreeNumber());
-            repeatGame();
+            Computer computer = Computer.saveComputerNumber(generateThreeNumber());
+            repeatGame(computer);
             outputView.printFinishMessage();
             Command command = inputView.readGameCommand();
             isContinue = command.isRestart();
         } while (isContinue);
     }
 
-    private void repeatGame() {
+    private void repeatGame(Computer computer) {
         boolean isSuccess = false;
         while (!isSuccess) {
             Player player = new Player(inputView.readNumbers());
