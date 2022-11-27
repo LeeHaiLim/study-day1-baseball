@@ -1,4 +1,4 @@
-package baseball;
+package baseball.util;
 
 public class Constants {
     public static final int BASEBALL_NUMBER_RANGE_START = 1;
