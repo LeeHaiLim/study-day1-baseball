@@ -20,7 +20,7 @@ public class InputView {
                 .collect(Collectors.toList());
     }
 
-    public static GameCommand readReGameInput() throws IllegalArgumentException {
+    public static GameCommand readReGameInput() {
         String reGameInput = Console.readLine();
         isNumeral(reGameInput);
         return GameCommand.getGameCommand(Integer.parseInt(reGameInput));
@@ -28,7 +28,7 @@ public class InputView {
 
     private static void isValidLength(String userNumberInput) {
         if (userNumberInput.length() != VALID_SIZE) {
-            throw new IllegalArgumentException("입력 시 숫자 3개를 입력해야 합니다.");
+            throw new IllegalArgumentException();
         }
     }
 
@@ -36,7 +36,7 @@ public class InputView {
         try {
             Integer.parseInt(numberInput);
         } catch (NumberFormatException e) {
-            throw new IllegalArgumentException("숫자가 아닌 값이 입력되었습니다.");
+            throw new IllegalArgumentException();
         }
     }
 }

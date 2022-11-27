@@ -13,8 +13,7 @@ class UserNumberTest {
     void insertUserNumberWithZero() {
         List<Integer> inputNumbers = List.of(0, 1, 2);
         Assertions.assertThatThrownBy(() -> new UserNumber(inputNumbers))
-                .isInstanceOf(IllegalArgumentException.class)
-                .hasMessage("입력된 숫자에 0이 포함되어 있습니다.");
+                .isInstanceOf(IllegalArgumentException.class);
     }
 
     @DisplayName("중복된 숫자가 포함된 리스트를 입력하면 예외를 발생한다.")
@@ -22,8 +21,7 @@ class UserNumberTest {
     void insertUserNumberWithDuplication() {
         List<Integer> inputNumbers = List.of(1, 1, 2);
         Assertions.assertThatThrownBy(() -> new UserNumber(inputNumbers))
-                .isInstanceOf(IllegalArgumentException.class)
-                .hasMessage("중복된 숫자가 포함되어 있습니다.");
+                .isInstanceOf(IllegalArgumentException.class);
     }
 
     @DisplayName("정상적인 숫자 리스트로 객체 생성 테스트")

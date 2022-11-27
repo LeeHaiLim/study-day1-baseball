@@ -22,7 +22,7 @@ public class UserNumber {
                 .distinct()
                 .collect(Collectors.toList());
         if (deDuplicatedNumbers.size() != 3) {
-            throw new IllegalArgumentException("중복된 숫자가 포함되어 있습니다.");
+            throw new IllegalArgumentException();
         }
     }
 
@@ -30,7 +30,7 @@ public class UserNumber {
         boolean isContainingZero = userNumbers.stream()
                 .anyMatch(number -> number == 0);
         if (isContainingZero) {
-            throw new IllegalArgumentException("입력된 숫자에 0이 포함되어 있습니다.");
+            throw new IllegalArgumentException();
         }
     }
 }
