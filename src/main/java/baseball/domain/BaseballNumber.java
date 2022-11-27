@@ -1,6 +1,9 @@
 package baseball.domain;
 
-public class BaseballNumber {
+import static baseball.util.Constants.BASEBALL_NUMBER_RANGE_START;
+import static baseball.util.Constants.BASEBALL_NUMBER_RANGE_END;
+
+public final class BaseballNumber {
     private final int number;
 
     public BaseballNumber(int number){
@@ -8,8 +11,10 @@ public class BaseballNumber {
         this.number = number;
     }
 
-    private void validate(int number){
-        //todo: validation logic
+    private void validate(int number) {
+        if (number < BASEBALL_NUMBER_RANGE_START || number > BASEBALL_NUMBER_RANGE_END) {
+            throw new IllegalArgumentException("");
+        }
     }
 
     public int getNumber() {
@@ -17,8 +22,14 @@ public class BaseballNumber {
     }
 
     @Override
-    public boolean equals(Object obj) {
-        //todo
-        return super.equals(obj);
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        BaseballNumber that = (BaseballNumber) o;
+        return number == that.number;
     }
 }
