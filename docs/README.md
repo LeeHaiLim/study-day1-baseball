@@ -17,6 +17,12 @@
 - [ ] 재게임 관련 입력을 받아 숫자로 변환하는 기능 - #readReGameInput()
   - [ ] 입력 받은 문자열이 숫자로 변환이 가능하지 않으면 예외처리 - #isNumeral()
 ---
+### 재게임 관련 열거형 클래스 ClassName: GameCommand
+- 멤버 : RETRY , QUIT
+- [ ] 입력받은 gameCommand 로 RETRY / QUIT 을 반환 - #getGameCommand()
+  - 예외 사항
+    - [ ] 1혹은 2의 값이 입력되어 값을 찾을 수 없는 경우 
+---
 ### 입력받은 3개의 숫자를 저장하는 일급 컬렉션 ClassName : UserNumber
 - [x] 입력받은 숫자 List 를 생성자에서 멤버 변수에 할당
   - 예외처리
