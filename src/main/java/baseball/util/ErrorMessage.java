@@ -14,6 +14,6 @@ public enum ErrorMessage {
     }
 
     public String message() {
-        return message;
+        return "[ERROR] " + message;
     }
 }
