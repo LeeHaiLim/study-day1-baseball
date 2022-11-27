@@ -20,7 +20,7 @@ public class Command {
     }
 
     private void validCommand(String command) {
-        if (Integer.parseInt(command) != 1 && Integer.parseInt(command) != 2) {
+        if (Integer.parseInt(command) != RESTART && Integer.parseInt(command) != QUIT) {
             throw new IllegalArgumentException(ErrorMessage.NOT_NUMBER_COMMAND.getMessage());
         }
     }
