@@ -18,10 +18,10 @@
   - [ ] 입력 받은 문자열이 숫자로 변환이 가능하지 않으면 예외처리 - #isNumeral()
 ---
 ### 입력받은 3개의 숫자를 저장하는 일급 컬렉션 ClassName : UserNumber
-- [ ] 입력받은 숫자 List 를 생성자에서 멤버 변수에 할당
+- [x] 입력받은 숫자 List 를 생성자에서 멤버 변수에 할당
   - 예외처리
-    - [ ] 중복되는 숫자를 포함하는 경우 예외처리 - #isDuplicate()
-    - [ ] 숫자가 0을 포함하는 경우 예외처리 - #isContainingZero()
+    - [x] 중복되는 숫자를 포함하는 경우 예외처리 - #isDuplicate()
+    - [x] 숫자가 0을 포함하는 경우 예외처리 - #isContainingZero()
 ---
 ### 출력을 담당하는 클래스 ClassName : OutputView
 - [ ] 게임을 시작하는 문구 출력 - #printGameStartMessage()
