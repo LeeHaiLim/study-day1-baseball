@@ -1,7 +1,17 @@
 package baseball;
 
+import baseball.game.Game;
+import util.Input;
+import util.InputValidator;
+import util.Output;
+
 public class Application {
     public static void main(String[] args) {
-        // TODO: 프로그램 구현
+        InputValidator inputValidator = new InputValidator();
+        Input input = new Input(inputValidator);
+        Output output = new Output();
+
+        Game game = new Game(input, output);
+        game.run();
     }
 }
