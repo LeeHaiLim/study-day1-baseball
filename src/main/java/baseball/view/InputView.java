@@ -15,6 +15,7 @@ public class InputView {
     }
 
     public Command readGameCommand() {
+        System.out.println(Message.RESTART_MESSAGE);
         String inputCommand = Console.readLine();
         validIsDigit(inputCommand);
         return new Command(inputCommand);
