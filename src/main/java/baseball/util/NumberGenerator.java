@@ -14,7 +14,7 @@ public class NumberGenerator {
 
     public static List<Integer> getGameNumbers() {
         Set<Integer> randomNumbers = new HashSet<>();
-        while(randomNumbers.size()<3) {
+        while (randomNumbers.size() < 3) {
             randomNumbers.add(Randoms.pickNumberInRange(MiN_NUM, MAX_NUM));
         }
         return new ArrayList<>(randomNumbers);

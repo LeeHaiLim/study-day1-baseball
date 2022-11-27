@@ -16,7 +16,7 @@ public class OutputView {
 
     public static void printResult(int strikes, int balls) {
         StringBuilder result = new StringBuilder();
-        saveBallResult(result,balls);
+        saveBallResult(result, balls);
         saveStrikeResult(result, strikes);
         System.out.println(result);
     }
