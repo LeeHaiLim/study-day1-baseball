@@ -22,6 +22,7 @@
   - 예외처리
     - [x] 중복되는 숫자를 포함하는 경우 예외처리 - #isDuplicate()
     - [x] 숫자가 0을 포함하는 경우 예외처리 - #isContainingZero()
+- [ ] 사용자의 숫자를 반환하는 기능 - #getUserNumbers()
 ---
 ### 출력을 담당하는 클래스 ClassName : OutputView
 - [ ] 게임을 시작하는 문구 출력 - #printGameStartMessage()
