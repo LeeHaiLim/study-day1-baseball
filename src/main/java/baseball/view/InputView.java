@@ -1,12 +1,14 @@
 package baseball.view;
 
 import baseball.constant.ErrorMessage;
+import baseball.constant.Message;
 import baseball.domain.Command;
 import camp.nextstep.edu.missionutils.Console;
 
 public class InputView {
 
     public String readNumbers() {
+        System.out.println(Message.NUMBER_INPUT_MESSAGE);
         String inputNumbers = Console.readLine();
         validIsDigit(inputNumbers);
         return inputNumbers;
