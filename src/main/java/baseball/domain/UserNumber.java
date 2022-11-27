@@ -1,5 +1,6 @@
 package baseball.domain;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -10,6 +11,10 @@ public class UserNumber {
         isDuplicate(userNumbers);
         isContainingZero(userNumbers);
         this.userNumbers = userNumbers;
+    }
+
+    public List<Integer> getUserNumbers() {
+        return Collections.unmodifiableList(userNumbers);
     }
 
     private void isDuplicate(List<Integer> userNumbers) {
