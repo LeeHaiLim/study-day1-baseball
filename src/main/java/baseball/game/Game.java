@@ -38,7 +38,7 @@ public class Game {
         }
         return GameStatus.EXIT;
     }
-    
+
     private BaseBallStatus makeNewBaseBallGame() {
         return BaseBallStatus.GUESSING;
     }
@@ -48,17 +48,15 @@ public class Game {
 
         while (baseBallStatus.isGuessing()) {
             Balls userBalls = makeUserBalls();
-            GameResult gameResult = checkAnswer(answerBalls, userBalls);
-            baseBallStatus = gameResult.isWinCondition();
+            checkAnswer(answerBalls, userBalls);
         }
 
         return getUserCommand();
     }
 
     private Balls makeAnswer(List<Integer> numbers) {
-        Balls answerBalls = new Balls(numbers);
         output.printStartGame();
-        return answerBalls;
+        return new Balls(numbers);
     }
 
     private Balls makeUserBalls() {
@@ -68,10 +66,10 @@ public class Game {
         return userBalls;
     }
 
-    private GameResult checkAnswer(Balls answerBalls, Balls userBalls) {
+    private void checkAnswer(Balls answerBalls, Balls userBalls) {
         GameResult gameResult = answerBalls.compareWithBalls(userBalls);
         output.printUserScore(gameResult);
-        return gameResult;
+        baseBallStatus = gameResult.isWinCondition();
     }
 
     private String getUserCommand() {

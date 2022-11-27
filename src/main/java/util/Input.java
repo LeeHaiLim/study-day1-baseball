@@ -24,10 +24,9 @@ public class Input {
     }
 
     private static List<Integer> splitFromString(String readLine) {
-        List<Integer> numbers = Arrays.stream(readLine.split(""))
+        return Arrays.stream(readLine.split(""))
                 .map(Integer::parseInt)
                 .collect(Collectors.toList());
-        return numbers;
     }
 
     private void validateNumbers(List<Integer> numbers) {

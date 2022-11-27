@@ -47,4 +47,12 @@ public class GameResult {
     public boolean isGameWin() {
         return strikeCount == Balls.BALLS_SIZE;
     }
+
+    public boolean hasBallCount() {
+        return this.ballCount > 0;
+    }
+
+    public boolean hasStrikeCount() {
+        return this.strikeCount > 0;
+    }
 }
