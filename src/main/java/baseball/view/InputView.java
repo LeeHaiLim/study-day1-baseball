@@ -1,6 +1,7 @@
 package baseball.view;
 
 import baseball.constant.ErrorMessage;
+import baseball.domain.Command;
 import camp.nextstep.edu.missionutils.Console;
 
 public class InputView {
@@ -9,6 +10,12 @@ public class InputView {
         String inputNumbers = Console.readLine();
         validIsDigit(inputNumbers);
         return inputNumbers;
+    }
+
+    public Command readGameCommand() {
+        String inputCommand = Console.readLine();
+        validIsDigit(inputCommand);
+        return new Command(inputCommand);
     }
 
     private void validIsDigit(String numbers) {
