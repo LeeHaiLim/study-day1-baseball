@@ -16,6 +16,16 @@ class CountingTest {
         Assertions.assertThat(counting.toString()).isEqualTo("2스트라이크");
     }
 
+    @DisplayName("1볼 2스트라이크")
+    @Test
+    void oneBallTwoStrike() {
+        Counting counting = new Counting();
+        counting.saveResult(Result.BALL);
+        counting.saveResult(Result.STRIKE);
+        counting.saveResult(Result.STRIKE);
+        Assertions.assertThat(counting.toString()).isEqualTo("1볼 2스트라이크");
+    }
+
     @DisplayName("3스트라이크")
     @Test
     void isFinishTest() {
