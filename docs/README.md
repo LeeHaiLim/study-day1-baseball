@@ -22,7 +22,7 @@
   - [x] 중복된 숫자가 있다면 예외가 발생한다. `Player - validDuplicateNumber()`
   - [x] 1~9사이의 숫자가 아닐 경우 예외가 발생한다. `Player - validNumberRange()`
   - [x] 세 자리 숫자가 아닐 경우 예외가 발생한다. `Player - validIsThreeNumber()`
-
+  - [x] 사용자에게 입력 받은 숫자를 저장한다. `Player - makePlayerNumber()`
 - [ ] 컴퓨터는 1~9사이의 중복되지 않은 랜덤 수 3자리를 생성한다. `GameController - generageThreeNumber()`
 - [ ] 컴퓨터가 생성한 숫자와 사용자가 입력한 숫자를 비교하여 저장한다. `GameController - saveResult()`
 - [ ] 결과를 출력한다. `OutputView - printResult()`
