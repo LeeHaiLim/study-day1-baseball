@@ -12,7 +12,7 @@ public enum GameCommand {
         this.reGameInput = reGameInput;
     }
 
-    public GameCommand getGameCommand(int reGameInput) {
+    public static GameCommand getGameCommand(int reGameInput) {
         return Arrays.stream(GameCommand.values())
                 .filter(command -> command.reGameInput == reGameInput)
                 .findAny()
