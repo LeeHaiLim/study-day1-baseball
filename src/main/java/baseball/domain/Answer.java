@@ -44,10 +44,6 @@ public class Answer {
         return new Answer(computer.stream().map(BaseballNumber::new).collect(Collectors.toList()));
     }
 
-    public BaseballNumber get(int index) {
-        return numbers.get(index);
-    }
-
     public int indexOf(BaseballNumber number) {
         return numbers.indexOf(number);
     }
