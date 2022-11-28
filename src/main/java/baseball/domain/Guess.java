@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Guess extends Answer {
+public class Guess extends BaseballNumbers {
     public Guess(String numbers) {
         super(toNumbers(numbers));
     }
